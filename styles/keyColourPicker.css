@@ -1,0 +1,31 @@
+.key-colour-picker__field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.key-colour-picker__colours {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.key-colour-picker__colours__colour {
+    display: flex;
+}
+
+.key-colour-picker__colours__colour label {
+    display: inline-block;
+    height: 32px;
+    width: 64px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px 0 0 4px;
+}
+
+.key-colour-picker__colours__colour label input {
+    visibility: hidden;
+}
+
+.key-colour-picker__colours__colour .icon-button {
+    border: 1px solid #e6e6e6;
+    border-radius: 0 4px 4px 0;
+}

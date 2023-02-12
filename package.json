@@ -10,6 +10,7 @@
         "format": "prettier -w ."
     },
     "dependencies": {
+        "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.13",
         "@next/font": "13.1.6",
         "eslint": "8.32.0",
         "eslint-config-next": "13.1.6",
