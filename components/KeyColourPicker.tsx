@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineMinus, AiOutlinePlusSquare } from 'react-icons/ai';
 
 interface KeyColourPickerProps {
     addKeyColour: () => void;
@@ -39,13 +40,13 @@ export function KeyColourPicker({
                                 className="icon-button"
                                 onClick={() => removeKeyColour(index)}
                             >
-                                <div className="icon icon--minus" />
+                                <AiOutlineMinus size="24px" height="100%" />
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className="icon-button" onClick={addKeyColour}>
-                    +
+                    <AiOutlinePlusSquare size="24px" height="100%" />
                 </div>
             </div>
         </section>
