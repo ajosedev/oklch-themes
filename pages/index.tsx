@@ -50,7 +50,7 @@ export default function Home() {
 
     useEffect(() => {
         calculate();
-    }, [calculate, keyColours]);
+    }, [keyColours]);
 
     return (
         <>
