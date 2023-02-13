@@ -2,9 +2,9 @@
 
 https://themes.ajose.dev
 
-A proof of concept for generating palettes by selecting one or more key colours. These colours are then previewed on mock UI components using CSS variables.
+A proof of concept for generating colour palettes by selecting one or more 'key colours'. These colours are then previewed on mock UI components.
 
-Colours are generated in the OKLCH colour space, with predetermined lightness stops.
+Colours are generated in the OKLCH colour space, with predetermined lightness stops using [Leonardo](https://leonardocolor.io/).
 
 ---
 
