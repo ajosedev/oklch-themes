@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineMinus, AiOutlinePlusSquare } from 'react-icons/ai';
+import styles from '../styles/KeyColourPicker.module.css';
 
 interface KeyColourPickerProps {
     addKeyColour: () => void;
@@ -16,18 +17,17 @@ export function KeyColourPicker({
 }: KeyColourPickerProps) {
     return (
         <section>
-            <div className="heading type type--bold">Key colors</div>
-            <div className="key-colour-picker__field">
-                <div className="key-colour-picker__colours">
+            <div>Key colours</div>
+            <div className={styles.field}>
+                <div className={styles.colours}>
                     {keyColours.map((keyColour, index) => (
-                        <div
-                            key={index}
-                            className="key-colour-picker__colours__colour"
-                        >
+                        <div key={index} className={styles.colour}>
                             <label
+                                className={styles.label}
                                 style={{ backgroundColor: keyColours[index] }}
                             >
                                 <input
+                                    className={styles.input}
                                     name="keyColour"
                                     onChange={(e) => {
                                         updateKeyColour(index, e.target.value);
@@ -37,7 +37,7 @@ export function KeyColourPicker({
                                 />
                             </label>
                             <div
-                                className="icon-button"
+                                className={styles.remove}
                                 onClick={() => removeKeyColour(index)}
                             >
                                 <AiOutlineMinus size="24px" height="100%" />
@@ -45,7 +45,7 @@ export function KeyColourPicker({
                         </div>
                     ))}
                 </div>
-                <div className="icon-button" onClick={addKeyColour}>
+                <div className={styles.add} onClick={addKeyColour}>
                     <AiOutlinePlusSquare size="24px" height="100%" />
                 </div>
             </div>

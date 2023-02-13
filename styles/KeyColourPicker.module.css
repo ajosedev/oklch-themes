@@ -1,19 +1,19 @@
-.key-colour-picker__field {
+.field {
     display: flex;
     justify-content: space-between;
 }
 
-.key-colour-picker__colours {
+.colours {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.key-colour-picker__colours__colour {
+.colour {
     display: flex;
 }
 
-.key-colour-picker__colours__colour label {
+.label {
     display: inline-block;
     height: 32px;
     width: 64px;
@@ -21,11 +21,20 @@
     border-radius: 4px 0 0 4px;
 }
 
-.key-colour-picker__colours__colour label input {
+.input {
     visibility: hidden;
 }
 
-.key-colour-picker__colours__colour .icon-button {
+.remove {
     border: 1px solid #e6e6e6;
     border-radius: 0 4px 4px 0;
+}
+
+.remove svg {
+    height: 100%;
+}
+
+.add svg {
+    margin-left: 0.5rem;
+    height: 100%;
 }

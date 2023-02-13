@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Theme, Color } from '@adobe/leonardo-contrast-colors';
-import styles from '../styles/Home.module.css';
 import { KeyColourPicker } from '../components/KeyColourPicker';
 import { ColourTable } from '../components/ColourTable';
+import styles from '../styles/Home.module.css';
 
 const defaultColour = '#aaa';
 
