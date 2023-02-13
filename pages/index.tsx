@@ -9,7 +9,7 @@ const defaultColour = '#aaa';
 
 export default function Home() {
     const [keyColours, setKeyColours] = useState([defaultColour]);
-    const [theme, setTheme] = useState(null);
+    const [theme, setTheme] = useState<any>(null);
 
     function addKeyColour() {
         setKeyColours((keyColours) => [...keyColours, defaultColour]);
@@ -50,7 +50,7 @@ export default function Home() {
 
     useEffect(() => {
         calculate();
-    }, [keyColours]);
+    }, [calculate, keyColours]);
 
     return (
         <>
