@@ -1,9 +1,14 @@
 .main {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 3rem;
+    justify-items: center;
+    gap: 1rem 3rem;
     padding: 2rem;
-    min-height: 100vh;
+}
+
+.heading {
+    grid-column: 1 / -1;
+    justify-self: start;
 }
 
 .leftColumn {

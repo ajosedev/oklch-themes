@@ -17,7 +17,6 @@ export function KeyColourPicker({
 }: KeyColourPickerProps) {
     return (
         <>
-            <h1>OKLCH Theming</h1>
             <p>
                 Generate a palette by selecting one or more key colours below.
             </p>
