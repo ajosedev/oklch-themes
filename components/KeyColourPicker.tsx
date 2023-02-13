@@ -17,9 +17,13 @@ export function KeyColourPicker({
 }: KeyColourPickerProps) {
     return (
         <>
-            <h1>Key colours</h1>
+            <h1>OKLCH Theming</h1>
             <p>
                 Generate a palette by selecting one or more key colours below.
+            </p>
+            <p>
+                Colours are generated in the OKLCH colour space, with
+                predetermined lightness stops.
             </p>
             <div className={styles.field}>
                 <div className={styles.colours}>
