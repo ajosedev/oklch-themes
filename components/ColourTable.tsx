@@ -10,7 +10,7 @@ interface Colour {
 function ColourRow({ colour }: { colour: Colour }) {
     return (
         <li className={styles.row} style={{ backgroundColor: colour.value }}>
-            <span>{colour.name.replace('foreground', '')}</span>
+            <span>{colour.name.replace('theme', '')}</span>
             <span>{colour.contrast}:1</span>
             <span className={styles.value}>{colour.value.toUpperCase()}</span>
         </li>

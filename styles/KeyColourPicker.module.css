@@ -1,6 +1,11 @@
+.container {
+    margin-bottom: 1rem;
+}
+
 .field {
     display: flex;
     justify-content: space-between;
+    margin-top: 0.5rem;
 }
 
 .colours {
@@ -35,6 +40,5 @@
 }
 
 .add svg {
-    margin-left: 0.5rem;
     height: 100%;
 }

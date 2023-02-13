@@ -16,8 +16,8 @@ export function KeyColourPicker({
     updateKeyColour,
 }: KeyColourPickerProps) {
     return (
-        <section>
-            <div>Key colours</div>
+        <div className={styles.container}>
+            <h2>Key colours</h2>
             <div className={styles.field}>
                 <div className={styles.colours}>
                     {keyColours.map((keyColour, index) => (
@@ -49,6 +49,6 @@ export function KeyColourPicker({
                     <AiOutlinePlusSquare size="24px" height="100%" />
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

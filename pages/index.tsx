@@ -4,6 +4,7 @@ import { Theme, Color } from '@adobe/leonardo-contrast-colors';
 import { KeyColourPicker } from '../components/KeyColourPicker';
 import { ColourTable } from '../components/ColourTable';
 import styles from '../styles/Home.module.css';
+import { MockPage } from '../components/MockPage';
 
 const defaultColour = '#aaa';
 
@@ -33,7 +34,7 @@ export default function Home() {
 
     function calculate() {
         const fg = new Color({
-            name: 'foreground',
+            name: 'theme',
             colorKeys: keyColours,
             colorspace: 'OKLCH',
             ratios: [1.05, 1.12, 1.33, 1.94, 3.0, 4.52, 6.6, 10.3, 15.0],
@@ -52,6 +53,15 @@ export default function Home() {
         calculate();
     }, [keyColours]);
 
+    const themeValues = theme?.contrastColors?.[1].values || [];
+
+    const themeCss = themeValues.reduce((acc: any, colour: any) => {
+        return {
+            ...acc,
+            [`--${colour.name}`]: colour.value,
+        };
+    }, {});
+
     return (
         <>
             <Head>
@@ -66,16 +76,19 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles.main}>
-                <KeyColourPicker
-                    addKeyColour={addKeyColour}
-                    keyColours={keyColours}
-                    removeKeyColour={removeKeyColour}
-                    updateKeyColour={updateKeyColour}
-                />
-                {!!theme && theme.contrastColors && (
-                    <ColourTable colours={theme.contrastColors[1].values} />
-                )}
+            <main className={styles.main} style={themeCss}>
+                <div>
+                    <KeyColourPicker
+                        addKeyColour={addKeyColour}
+                        keyColours={keyColours}
+                        removeKeyColour={removeKeyColour}
+                        updateKeyColour={updateKeyColour}
+                    />
+                    {!!theme && theme.contrastColors && (
+                        <ColourTable colours={themeValues} />
+                    )}
+                </div>
+                <MockPage />
             </main>
         </>
     );
