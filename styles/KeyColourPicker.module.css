@@ -1,11 +1,6 @@
-.container {
-    margin-bottom: 1rem;
-}
-
 .field {
     display: flex;
     justify-content: space-between;
-    margin-top: 0.5rem;
 }
 
 .colours {

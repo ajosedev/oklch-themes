@@ -1,3 +1,7 @@
+:root {
+    --border-radius: 6px;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

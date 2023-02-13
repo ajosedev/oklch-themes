@@ -5,20 +5,150 @@
     align-items: center;
 }
 
+.inline {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Components */
+
+.text {
+    color: var(--theme900);
+}
+
 .button {
     padding: 0.5rem 1rem;
     border: 2px solid;
+    border-radius: var(--border-radius);
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
 
-    background-color: var(--theme400);
+.primaryButton {
+    background-color: var(--theme500);
+    border-color: var(--theme500);
     color: var(--theme100);
 }
 
+.primaryButton:hover {
+    background-color: var(--theme600);
+    border-color: var(--theme600);
+}
+
+.primaryButton:active {
+    background-color: var(--theme700);
+    border-color: var(--theme700);
+}
+
 .secondaryButton {
+    background-color: var(--theme300);
+    border-color: var(--theme300);
+    color: var(--theme800);
+}
+
+.secondaryButton:hover {
+    background-color: var(--theme400);
+    border-color: var(--theme400);
+}
+
+.secondaryButton:active {
+    background-color: var(--theme500);
+    border-color: var(--theme500);
+}
+
+.tertiaryButton {
     border-color: var(--theme300);
     color: var(--theme400);
     background: none;
 }
 
-.link {
+.tertiaryButton:hover {
+    border-color: var(--theme400);
+    color: var(--theme500);
+}
+
+.tertiaryButton:active {
+    border-color: var(--theme500);
     color: var(--theme600);
 }
+
+.icon {
+    display: flex;
+    align-items: center;
+    color: var(--theme700);
+}
+
+.link {
+    cursor: pointer;
+
+    color: var(--theme700);
+}
+
+.link:hover {
+    color: var(--theme800);
+}
+
+.alert {
+    width: 100%;
+    background-color: var(--theme100);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--theme800);
+    border-width: 0 0 0 4px;
+}
+
+.checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: var(--theme700);
+}
+
+.radio {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: var(--theme700);
+}
+
+.input {
+    border: 1px solid var(--theme800);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: rotation 1s linear infinite;
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid var(--theme700);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: var(--border-radius);
+    color: var(--theme700);
+    background-color: var(--theme200);
+}
+
+.pill svg {
+    margin-left: 0.25rem;
+}
+
+/* Table, Toggle */

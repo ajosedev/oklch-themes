@@ -77,7 +77,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main} style={themeCss}>
-                <div>
+                <div className={styles.leftColumn}>
                     <KeyColourPicker
                         addKeyColour={addKeyColour}
                         keyColours={keyColours}
